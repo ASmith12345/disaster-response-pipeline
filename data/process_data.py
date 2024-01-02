@@ -27,7 +27,7 @@ def clean_data(messy_data):
     row = categories.loc[0]
     category_names = row.apply(lambda x: x[:-2]).values.tolist()
     categories.columns = category_names
-
+    categories.related.loc[categories.related == 'related-2'] = 'related-1'
     for column in categories:
         categories[column] = categories[column].astype(str).str[-1]
         categories[column] = pd.to_numeric(categories[column])
