@@ -1,13 +1,16 @@
 # disaster-response-pipeline
 
-Summary
+## Summary
+
 This is part of Udacity DataScience NanoDegree Data Engineering Project. The motivartion is to analyze social media messages during a disaster to classify relevance to particular supports.
 
-File Structure
+## File Structure
+
 app/templates
 -go.html - html file which receives user input and displays results
 -master.html - html file which diplays visualisations
 app/run.py - runs flask app
+
 data
 -caegories.csv: disaster categories
 -messages.csv: disaster messages
@@ -16,7 +19,7 @@ data
 models
 -train_classifier.py: ML pipeline which trains and evaluates models, then svaes in a pickle file
 
-How to run
+## How to run
 Run in the following order
 
 Run the ETL pipeline from the root directory
