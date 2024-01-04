@@ -15,7 +15,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import GridSearchCV
 from sklearn.ensemble import RandomForestClassifier
-
+from sklearn.multiclass import OneVsRestClassifier
+from sklearn.svm import LinearSVC
 
 def load_data(database):
     '''
@@ -102,7 +103,8 @@ def main():
         model.fit(X_train, y_train)
 
         print('Evaluating model...')
-        evaluate_model(model, X_test, y_test, categories)
+        # evaluate_model(model, X_test, y_test, categories)
+        print(evaluate_model(model, X_test, y_test, categories))
 
         print(f'Saving model to classifier.pkl')
         save_model(model, 'classifier.pkl')
